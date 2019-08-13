@@ -1,2 +1,2 @@
-# wordpressjuice
-pressjuice
+# Press Jusice
+Wordpress analytics plugin. 
