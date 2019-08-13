@@ -1,0 +1,1 @@
+SELECT url, COUNT(sc) AS sccount FROM (SELECT url, wp2_pressjuice.sessioncookie AS sc FROM `wp2_pressjuice` INNER JOIN( SELECT sessioncookie, MIN(time) AS mintime FROM `wp2_pressjuice` GROUP BY sessioncookie) T ON T.sessioncookie = wp2_pressjuice.sessioncookie AND T.mintime = wp2_pressjuice.time)AS Y GROUP BY url LIMIT 15
